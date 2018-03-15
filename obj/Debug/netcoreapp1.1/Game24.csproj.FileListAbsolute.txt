@@ -1,0 +1,34 @@
+C:/Users/mikey/Desktop/Coding Dojo/dojo_stack/C#/Game24/bin/Debug/netcoreapp1.1/Game24.deps.json
+C:/Users/mikey/Desktop/Coding Dojo/dojo_stack/C#/Game24/bin/Debug/netcoreapp1.1/Game24.runtimeconfig.json
+C:/Users/mikey/Desktop/Coding Dojo/dojo_stack/C#/Game24/bin/Debug/netcoreapp1.1/Game24.runtimeconfig.dev.json
+C:/Users/mikey/Desktop/Coding Dojo/dojo_stack/C#/Game24/bin/Debug/netcoreapp1.1/Game24.dll
+C:/Users/mikey/Desktop/Coding Dojo/dojo_stack/C#/Game24/obj/Debug/netcoreapp1.1/Game24.AssemblyInfo.cs
+C:/Users/mikey/Desktop/Coding Dojo/dojo_stack/C#/Game24/obj/Debug/netcoreapp1.1/Game24.dll
+C:/Users/mikey/Desktop/Coding Dojo/dojo_stack/C#/Game24/obj/Debug/netcoreapp1.1/Game24.pdb
+C:/Users/mikey/Desktop/Coding Dojo/dojo_stack/C#/Game24/bin/Debug/netcoreapp1.1/Game24.pdb
+/Users/bkila/Downloads/C-_Game24-master 2/bin/Debug/netcoreapp1.1/Game24.deps.json
+/Users/bkila/Downloads/C-_Game24-master 2/bin/Debug/netcoreapp1.1/Game24.runtimeconfig.json
+/Users/bkila/Downloads/C-_Game24-master 2/bin/Debug/netcoreapp1.1/Game24.runtimeconfig.dev.json
+/Users/bkila/Downloads/C-_Game24-master 2/bin/Debug/netcoreapp1.1/Game24.dll
+/Users/bkila/Downloads/C-_Game24-master 2/bin/Debug/netcoreapp1.1/Game24.pdb
+/Users/bkila/Downloads/C-_Game24-master 2/obj/Debug/netcoreapp1.1/Game24.csproj.CoreCompileInputs.cache
+/Users/bkila/Downloads/C-_Game24-master 2/obj/Debug/netcoreapp1.1/Game24.AssemblyInfo.cs
+/Users/bkila/Downloads/C-_Game24-master 2/obj/Debug/netcoreapp1.1/Game24.dll
+/Users/bkila/Downloads/C-_Game24-master 2/obj/Debug/netcoreapp1.1/Game24.pdb
+/Users/bkila/Desktop/Game24/bin/Debug/netcoreapp1.1/Game24.deps.json
+/Users/bkila/Desktop/Game24/bin/Debug/netcoreapp1.1/Game24.runtimeconfig.json
+/Users/bkila/Desktop/Game24/bin/Debug/netcoreapp1.1/Game24.runtimeconfig.dev.json
+/Users/bkila/Desktop/Game24/bin/Debug/netcoreapp1.1/Game24.dll
+/Users/bkila/Desktop/Game24/bin/Debug/netcoreapp1.1/Game24.pdb
+/Users/bkila/Desktop/Game24/obj/Debug/netcoreapp1.1/Game24.csproj.CoreCompileInputs.cache
+/Users/bkila/Desktop/Game24/obj/Debug/netcoreapp1.1/Game24.AssemblyInfo.cs
+/Users/bkila/Desktop/Game24/obj/Debug/netcoreapp1.1/Game24.dll
+/Users/bkila/Desktop/Game24/obj/Debug/netcoreapp1.1/Game24.pdb
+C:\Users\Joshua\Desktop\Game24-master\bin\Debug\netcoreapp1.1\Game24.deps.json
+C:\Users\Joshua\Desktop\Game24-master\bin\Debug\netcoreapp1.1\Game24.runtimeconfig.json
+C:\Users\Joshua\Desktop\Game24-master\bin\Debug\netcoreapp1.1\Game24.runtimeconfig.dev.json
+C:\Users\Joshua\Desktop\Game24-master\bin\Debug\netcoreapp1.1\Game24.dll
+C:\Users\Joshua\Desktop\Game24-master\bin\Debug\netcoreapp1.1\Game24.pdb
+C:\Users\Joshua\Desktop\Game24-master\obj\Debug\netcoreapp1.1\Game24.AssemblyInfo.cs
+C:\Users\Joshua\Desktop\Game24-master\obj\Debug\netcoreapp1.1\Game24.dll
+C:\Users\Joshua\Desktop\Game24-master\obj\Debug\netcoreapp1.1\Game24.pdb
