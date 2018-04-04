@@ -39,7 +39,7 @@ namespace Game24
                 System.Console.WriteLine("Enter y to Start 👍\n\n");
                 start = Console.ReadLine().ToLower();
                 
-            } while (start != "y");
+            } while (start != "y" && start != "n");
             
             if(start.ToLower().Equals("y"))
             {
@@ -48,15 +48,17 @@ namespace Game24
                     GetCard();
                     Play();
                 } while(again.Equals("y"));              
-            }        
-            string thanks = @"
+            }
+            else{    
+                string thanks = @"
   _____ _                 _                           __                    _             _             _ 
  |_   _| |__   __ _ _ __ | | __  _   _  ___  _   _   / _| ___  _ __   _ __ | | __ _ _   _(_)_ __   __ _| |
    | | | '_ \ / _` | '_ \| |/ / | | | |/ _ \| | | | | |_ / _ \| '__| | '_ \| |/ _` | | | | | '_ \ / _` | |
    | | | | | | (_| | | | |   <  | |_| | (_) | |_| | |  _| (_) | |    | |_) | | (_| | |_| | | | | | (_| |_|
    |_| |_| |_|\__,_|_| |_|_|\_\  \__, |\___/ \__,_| |_|  \___/|_|    | .__/|_|\__,_|\__, |_|_| |_|\__, (_)
                                  |___/                               |_|            |___/         |___/   ";
-            Console.WriteLine(thanks);
+                Console.WriteLine(thanks);
+            }
         }
 
         public static List<string> GetTokens(string expression)
@@ -65,27 +67,27 @@ namespace Game24
             List<string> tokens = new List<string>();
             StringBuilder sb = new StringBuilder();
 
-            foreach (char c in expression.Replace(" ", string.Empty)) 
+            foreach (char c in expression.Replace(" ", string.Empty))//removes any spaces from expression
             {
                 // blank space
-                if (operators.IndexOf(c) >= 0) 
+                if (operators.IndexOf(c) >= 0)//checking if character in string is an operation
                 {
-                    if ((sb.Length > 0)) 
+                    if ((sb.Length > 0))
                     {
-                        tokens.Add(sb.ToString());
+                        tokens.Add(sb.ToString());//adds number to string
                         sb.Length = 0;
                     }
-                    tokens.Add(c.ToString());
+                    tokens.Add(c.ToString());//adds operators
                 } 
                 else 
                 {
-                    sb.Append(c);
+                    sb.Append(c);//builds number
                 }
             }
 
             if ((sb.Length > 0)) 
             {
-                tokens.Add(sb.ToString());
+                tokens.Add(sb.ToString());//adds final number to tokens
             }
             return tokens;
         }
@@ -107,12 +109,17 @@ namespace Game24
         }
         public static void Play()
         {
-            System.Console.WriteLine("\nEnter your expressions: 😊");
+            System.Console.WriteLine("\nType new for new cards\nEnter your expressions: 😊");
             string input = "";
             double exp = 0.0;
             do
             {
-                input = Console.ReadLine();
+                input = Console.ReadLine().ToLower();
+                if (input == "new"){
+                    again = "y";
+                }
+                else{
+
                 exp = Evaluate(input);
                 if(exp == 24)
                 {
@@ -143,14 +150,15 @@ namespace Game24
                 Console.WriteLine(wrong);
                     System.Console.WriteLine("Try again!"); 
                 } 
-            } while (exp != 24);
+                }
+            } while (again != "y" && again != "n");
             
         }
         public static double Evaluate(string expression)
         {
-            List<string> tokens = GetTokens(expression);
-            Stack<double> operandStack = new Stack<double>();
-            Stack<string> operatorStack = new Stack<string>();
+            List<string> tokens = GetTokens(expression);//returns an array of numbers and operators in correct order
+            Stack<double> operandStack = new Stack<double>();//for numbers
+            Stack<string> operatorStack = new Stack<string>();//for operators
             int tokenIndex = 0;
             while (tokenIndex < tokens.Count)
             {
@@ -170,8 +178,7 @@ namespace Game24
                 }
                 else if (token.Equals("+") || token.Equals("-"))
                 {
-                    while(operatorStack.Count != 0 && (operatorStack.Peek().Equals("+") ||
-                                    operatorStack.Peek().Equals("-")))
+                    while(operatorStack.Count != 0 && (operatorStack.Peek().Equals("+") || operatorStack.Peek().Equals("-")))
                     {
                         processAnOperator(operandStack, operatorStack);
                     }
@@ -181,9 +188,7 @@ namespace Game24
                 else if(token.Equals("*") || token.Equals("/"))
                 {
                     // Process all *, / in the top of the operator stack
-                    while (operatorStack.Count != 0 &&
-                            (operatorStack.Peek().Equals('*') ||
-                            operatorStack.Peek().Equals('/')))
+                    while (operatorStack.Count != 0 && (operatorStack.Peek().Equals('*') || operatorStack.Peek().Equals('/')))
                     {
                         processAnOperator(operandStack, operatorStack);
                     }
@@ -215,17 +220,26 @@ namespace Game24
         public static void processAnOperator(Stack<double> operandStack, 
             Stack<string> operatorStack)
         {
-            string op = operatorStack.Pop();
-            double op1 = operandStack.Pop();
-            double op2 = operandStack.Pop();
-            if (op == "+")
+            string op = operatorStack.Pop();//operation
+            double op1 = operandStack.Pop();//num
+            double op2 = operandStack.Pop();//num
+            if (op == "+"){
                 operandStack.Push(op2 + op1);
-            else if (op == "-")
+                Console.WriteLine(op2 + op1);
+            }
+            else if (op == "-"){
                 operandStack.Push(op2 - op1);
-            else if (op == "*")            
+                Console.WriteLine(op2 - op1);
+            }
+            else if (op == "*"){
                 operandStack.Push((op2) * (op1));            
-            else if (op == "/")
-                operandStack.Push(op2 / op1);    
+                Console.WriteLine((op2) * (op1));               
+            }            
+            else if (op == "/"){
+                operandStack.Push(op2 / op1);
+                Console.WriteLine(op2 / op1);               
+            }
+            
         }
 
     }
